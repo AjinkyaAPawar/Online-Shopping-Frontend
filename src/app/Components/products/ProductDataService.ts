@@ -1,15 +1,17 @@
-import { Injectable } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 import { ProductsComponent } from "./products.component";
+import { Product } from "../products/products.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductDataService {
 
-  productData: ProductsComponent[];
+  // productData: ProductsComponent[];
+  productData = new EventEmitter <Product[]>()
 
-  addData(productData: ProductsComponent[]) {
-    this.productData = productData;
+  addData(productList: Product[]) {
+    this.productData.emit(productList);
   }
 
   getData() {

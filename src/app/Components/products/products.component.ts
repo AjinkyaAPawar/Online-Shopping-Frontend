@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class ProductsComponent {
+
+}
+
+export class Product{
   name: string;
   brand:string;
   description:string;
