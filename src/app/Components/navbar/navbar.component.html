@@ -12,7 +12,7 @@
                 type="search"
                 placeholder="Search your product"
                 class="form-control"
-                [(ngModel)]="name"
+                ngModel="name"
                 name="name"
               />
               <button class="btn bg-white" type="submit">
@@ -24,7 +24,7 @@
         <div class="col-md-5 my-auto">
           <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/cart">
                 <i class="fa fa-shopping-cart"></i> Cart (0)
               </a>
             </li>
@@ -72,7 +72,7 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="/cart"
                     ><i class="fa fa-shopping-cart"></i> My Cart</a
                   >
                 </li>
@@ -138,5 +138,5 @@
       </div>
     </div>
   </nav>
-  <div>
+  <div></div>
 </div>
