@@ -16,6 +16,7 @@ import { ProductsComponent } from './Components/products/products.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { RetailerComponent } from './Components/Panel/retailer/retailer.component';
 import { AdminComponent } from './Components/Panel/admin/admin.component';
+import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { AdminComponent } from './Components/Panel/admin/admin.component';
     CartComponent,
     RetailerComponent,
     AdminComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
