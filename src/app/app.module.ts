@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Components/Panel/dashboard/dashboard.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { OrdersComponent } from './Components/orders/orders.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ProductDetailComponent } from './Components/product-detail/product-deta
     AdminComponent,
     DashboardComponent,
     ProductDetailComponent,
+    CheckoutComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,

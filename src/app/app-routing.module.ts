@@ -7,17 +7,20 @@ import { DashboardComponent } from './Components/Panel/dashboard/dashboard.compo
 import { CartComponent } from './Components/cart/cart.component';
 import { RetailerLoginComponent } from './Components/Login/retailer-login/retailer-login.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { RetailerRegistrationComponent } from './Components/Register/retailer-registration/retailer-registration.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: UserLoginComponent },
-  { path: 'register', component: UserRegistrationComponent },
+  { path: 'register/user', component: UserRegistrationComponent },
+  { path: 'register/retailer', component: RetailerRegistrationComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cart', component: CartComponent },
   { path: 'retailer-login', component: RetailerLoginComponent },
-  { path: '', component: HomeComponent },
   { path: 'product/tshirt1', component: ProductDetailComponent },
-  { path: 'cart', component: CartComponent }
+  { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CheckoutComponent },
 ];
 
 @NgModule({

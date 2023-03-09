@@ -21,7 +21,12 @@
           <div class="details flex flex-col py-2">
             <div class="name">{{ c.value.name }}</div>
             <div class="brand">{{ c.value.brand }}</div>
-            <button class="text-gray-600 mt-4 w-max">Remove</button>
+            <button
+              class="text-gray-600 mt-4 w-max"
+              (click)="deleteProductFromCart(c.key)"
+            >
+              Remove
+            </button>
           </div>
         </td>
         <td class="flex space-x-4">
@@ -60,11 +65,13 @@
         <span>Total cost</span>
         <span>₹{{ cartTotal + delivery - discount }}</span>
       </div>
-      <button
-        class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full"
-      >
-        Checkout
-      </button>
+      <a href="/checkout">
+        <button
+          class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full"
+        >
+          Checkout
+        </button>
+      </a>
     </div>
   </div>
 </div>
