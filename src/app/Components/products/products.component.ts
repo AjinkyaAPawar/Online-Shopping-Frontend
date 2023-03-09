@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
 
+export class ProductsComponent {
+  name: string;
+  brand:string;
+  description:string;
+  price : number;
+  rank:number;
+  picture:string;
+  weight:number;
 }

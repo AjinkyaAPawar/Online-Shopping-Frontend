@@ -19,6 +19,7 @@ import { AdminComponent } from './Components/Panel/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './Components/Panel/dashboard/dashboard.component';
+import { ProductDataService } from './Components/products/ProductDataService';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { DashboardComponent } from './Components/Panel/dashboard/dashboard.compo
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

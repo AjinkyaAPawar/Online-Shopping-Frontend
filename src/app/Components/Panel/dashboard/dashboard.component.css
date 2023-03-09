@@ -1,0 +1,10 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css");
+
+section{
+  background-color: #eee
+}
+
+.mask{
+  background-color: rgba(253, 253, 253, 0.15)
+}
