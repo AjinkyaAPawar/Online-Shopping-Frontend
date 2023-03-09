@@ -11,5 +11,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./retailer-login.component.css'],
 })
 export class RetailerLoginComponent {
- 
+  constructor(private http: HttpClient) {}
+
+  Login(credentials: { email: string; password: string }) {
+    let url = `http://localhost:8080/retailer/login`;
+    console.log(credentials);
+    this.http.post(url, credentials).subscribe((res) => {
+      console.log(res);
+    });
+  }
 }

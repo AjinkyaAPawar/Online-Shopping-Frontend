@@ -23,6 +23,7 @@ import { ProductDetailComponent } from './Components/product-detail/product-deta
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { OrdersComponent } from './Components/orders/orders.component';
 
+import { ProductDataService } from './Components/products/ProductDataService';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { OrdersComponent } from './Components/orders/orders.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

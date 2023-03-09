@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { NgForOf } from '@angular/common';
+import { ProductDataService } from '../products/ProductDataService';
+import { Product, ProductsComponent } from '../products/products.component';
+import { DashboardComponent } from '../Panel/dashboard/dashboard.component';
 
 
 @Component({
@@ -13,14 +15,17 @@ export class NavbarComponent {
   name!: string;
   productData !: any;
 
-  constructor(private http: HttpClient, private router:Router) {}
-      serachProduct(){
+  constructor(private http: HttpClient, private router:Router, private service: ProductDataService) {}
+      searchProduct(){
         let url =`http://localhost:8080/search?name=${this.name}`;
-        this.http.get(url).subscribe((response)=>{
+        this.http.get<Product[]>(url).subscribe((response)=>{
           console.log(response);
           this.productData = response;
           this.router.navigate(['/dashboard']);
-          sessionStorage.setItem('productData', JSON.stringify(this.productData));
+          this.service.addData(response);
+          //sessionStorage.setItem('productData', JSON.stringify(this.productData));
         })
       }
 }
+
+
