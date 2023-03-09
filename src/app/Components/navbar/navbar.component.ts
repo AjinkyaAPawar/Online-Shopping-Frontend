@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { NgForOf } from '@angular/common';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +10,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  name!: string;
+  productData !: any;
 
+  constructor(private http: HttpClient, private router:Router) {}
+      serachProduct(){
+        let url =`http://localhost:8080/search?name=${this.name}`;
+        this.http.get(url).subscribe((response)=>{
+          console.log(response);
+          this.productData = response;
+          this.router.navigate(['/dashboard']);
+          sessionStorage.setItem('productData', JSON.stringify(this.productData));
+        })
+      }
 }
