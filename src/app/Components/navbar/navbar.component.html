@@ -6,13 +6,13 @@
           <h5 class="brand-name">Ekart</h5>
         </div>
         <div class="col-md-5 my-auto">
-          <form (ngSubmit)="serachProduct()" role="search">
+          <form (ngSubmit)="searchProduct()" role="search">
             <div class="input-group">
               <input
                 type="search"
                 placeholder="Search your product"
                 class="form-control"
-                ngModel="name"
+                [(ngModel)]="name"
                 name="name"
               />
               <button class="btn bg-white" type="submit">

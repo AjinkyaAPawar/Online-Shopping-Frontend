@@ -16,7 +16,7 @@ export class NavbarComponent {
   productData !: any;
 
   constructor(private http: HttpClient, private router:Router, private service: ProductDataService) {}
-      serachProduct(){
+      searchProduct(){
         let url =`http://localhost:8080/search?name=${this.name}`;
         this.http.get<ProductsComponent[]>(url).subscribe((response)=>{
           console.log(response);
