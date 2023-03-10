@@ -13,17 +13,15 @@ import { DashboardComponent } from '../Panel/dashboard/dashboard.component';
 })
 export class NavbarComponent {
   name!: string;
-  productData !: any;
 
   constructor(private http: HttpClient, private router:Router, private service: ProductDataService) {}
       searchProduct(){
         let url =`http://localhost:8080/search?name=${this.name}`;
         this.http.get<Product[]>(url).subscribe((response)=>{
           console.log(response);
-          this.productData = response;
           this.router.navigate(['/dashboard']);
           this.service.addData(response);
-          //sessionStorage.setItem('productData', JSON.stringify(this.productData));
+          // sessionStorage.setItem('productData', JSON.stringify(this.productData));
         })
       }
 }
