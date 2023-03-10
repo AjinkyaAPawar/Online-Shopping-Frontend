@@ -8,11 +8,13 @@ import { CartComponent } from './Components/cart/cart.component';
 import { RetailerLoginComponent } from './Components/Login/retailer-login/retailer-login.component';
 import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { RetailerComponent } from './Components/Panel/retailer/retailer.component';
-
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { RetailerRegistrationComponent } from './Components/Register/retailer-registration/retailer-registration.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: UserLoginComponent },
-  { path: 'register', component: UserRegistrationComponent },
+  { path: 'register/user', component: UserRegistrationComponent },
+  { path: 'register/retailer', component: RetailerRegistrationComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cart', component: CartComponent },
   { path: 'retailer-login', component: RetailerLoginComponent },
@@ -21,7 +23,8 @@ const routes: Routes = [
   { path: 'retailer/panel', component: RetailerComponent },
   {path : 'user/registration', component:UserRegistrationComponent},
   {path : 'user/registration', component:UserRegistrationComponent},
-  {path : 'product/detail', component:ProductDetailComponent}
+  {path : 'product/detail', component:ProductDetailComponent},
+  { path: 'checkout', component: CheckoutComponent },
 ];
 
 @NgModule({

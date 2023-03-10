@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
 })
-export class CartComponent {
+export class CheckoutComponent {
   dataFromLocal:{} = JSON.parse(localStorage.getItem('cartData')!);
   noOfItem:number = Object.keys(this.dataFromLocal).length;
   keys = Object.keys(this.dataFromLocal);
   cartTotal:number = 0;
   discount:number = 150;
   delivery:number = 0;
+
+
+  
 
   addProduct(id:number){
     this.dataFromLocal[id].quantity = this.dataFromLocal[id].quantity + 1;
@@ -41,6 +44,7 @@ export class CartComponent {
       this.cartTotal += this.dataFromLocal[key].price * this.dataFromLocal[key].quantity;
     }
   }
+
   
   constructor(){
     this.updateTotal();

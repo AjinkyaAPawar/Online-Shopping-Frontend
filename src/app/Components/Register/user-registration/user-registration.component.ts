@@ -30,5 +30,3 @@ export class UserRegistrationComponent {
       });
   }
 }
-
-
