@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -13,18 +15,37 @@ export class CheckoutComponent {
   discount:number = 150;
   delivery:number = 0;
 
+  email!: string;
+  name!: string;
+  number!: number
+  sales_tax:number=5;
+  customerId:number=1;
+  order_date:Date  = new Date();
 
-  
+  saveOrder(){
+    let url = `http://localhost:8080/addOrder`;
+
+        this.http.post(url, {
+          number: this.noOfItem,
+          sales_tax:this.sales_tax,
+          customerId:this.customerId,
+          order_date:this.order_date
+        }).subscribe((res) => {
+          console.log(res);
+          this.router.navigate(['/']);
+        });
+  }
+
 
   addProduct(id:number){
     this.dataFromLocal[id].quantity = this.dataFromLocal[id].quantity + 1;
     localStorage.setItem('cartData', JSON.stringify(this.dataFromLocal));
     this.updateTotal();
   }
-  
+
   removeProduct(id:number){
     this.dataFromLocal[id].quantity = this.dataFromLocal[id].quantity - 1;
-    
+
     if (this.dataFromLocal[id]["quantity"] <= 0) {
       delete this.dataFromLocal[id];
     }
@@ -45,8 +66,8 @@ export class CheckoutComponent {
     }
   }
 
-  
-  constructor(){
+
+  constructor(private http : HttpClient, private router:Router){
     this.updateTotal();
   }
 }
