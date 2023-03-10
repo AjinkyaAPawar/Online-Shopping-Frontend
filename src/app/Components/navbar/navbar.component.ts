@@ -24,6 +24,10 @@ export class NavbarComponent {
           // sessionStorage.setItem('productData', JSON.stringify(this.productData));
         })
       }
+
+      navigateToCategory(){
+        this.router.navigate(['/category'])
+      }
 }
 
 

@@ -21,10 +21,10 @@ export class RetailerComponent {
   constructor(private http: HttpClient){}
   ngOnInit(){
     console.log("component has been initialised");
-    // this.showAllProducts();
+    this.showAllProducts()
 
   }
-  showAllProducts(){
+//   showAllProducts(){
 //     this.retailerData.id = sessionStorage.getItem("retailerId")
 //     this.retailerData.email = sessionStorage.getItem("retailerEmail");
 //     this.retailerData.password = sessionStorage.getItem("retailerPassword");
@@ -37,5 +37,21 @@ export class RetailerComponent {
 //     console.log(response);
 //     this.productsData = response.data;
 // });
+// }
+
+showAllProducts(){
+      this.retailerData.id = sessionStorage.getItem("retailerId")
+      this.retailerData.email = sessionStorage.getItem("retailerEmail");
+      this.retailerData.password = sessionStorage.getItem("retailerPassword");
+let url = `http://localhost:8080/show-all-products`
+const jsonData = JSON.stringify(this.retailerData);
+axios.post(url, jsonData,{
+  headers: {
+      "Content-Type": "application/json"
+  }}).then((response) => {
+  console.log(response);
+  this.productsData = response.data;
+});
+
 }
 }

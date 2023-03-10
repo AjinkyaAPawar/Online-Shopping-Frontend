@@ -10,6 +10,9 @@ import { ProductDetailComponent } from './Components/product-detail/product-deta
 import { RetailerComponent } from './Components/Panel/retailer/retailer.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { RetailerRegistrationComponent } from './Components/Register/retailer-registration/retailer-registration.component';
+import { CategoryComponent } from './Components/category/category.component';
+import { CategoriesComponent } from './Components/categories/categories.component';
+import { OrderDetailsComponent } from './Components/order-details/order-details.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: UserLoginComponent },
@@ -23,8 +26,11 @@ const routes: Routes = [
   { path: 'retailer/panel', component: RetailerComponent },
   {path : 'user/registration', component:UserRegistrationComponent},
   {path : 'user/registration', component:UserRegistrationComponent},
-  {path : 'product/detail', component:ProductDetailComponent},
+  {path : 'products/description', component:ProductDetailComponent},
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'category', component: CategoryComponent },
+  { path: 'categories', component: CategoriesComponent },
+  { path: 'order/details', component: OrderDetailsComponent },
 ];
 
 @NgModule({

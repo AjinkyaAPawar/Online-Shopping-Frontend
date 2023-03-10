@@ -1,1 +1,10 @@
-<p>categories works!</p>
+<div class="card"  *ngFor="let p of productsData">
+
+  <img src={{p.picture}} (click)="getOneProduct(p.id)" alt="product"/>
+  <div class="container" (click)="getOneProduct(p.id)">
+    <h4 (click)="getOneProduct(p.id)">
+      <b>{{p.name}}</b>
+    </h4>
+    <p>{{p.price}}</p>
+  </div>
+</div>

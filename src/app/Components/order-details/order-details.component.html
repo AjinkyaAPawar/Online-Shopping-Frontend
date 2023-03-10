@@ -1,0 +1,45 @@
+<div class="card mt-50 mb-50" >
+  <div class="col d-flex"><span class="text-muted" id="orderno">order #546924</span></div>
+  <div class="gap">
+      <div class="col-2 d-flex mx-auto"> </div>
+  </div>
+  <div class="title mx-auto"> Thank you for your order! </div>
+  <div class="main"> <span id="sub-title">
+          <p><b>Payment Summary</b></p>
+      </span>
+      <div class="items">
+          <div
+            class="w-full flex justify-between items-center p-3 rounded shadow"
+            *ngFor="let c of dataFromLocal | keyvalue"
+          >
+            <td class="flex space-x-2">
+              <img class="w-24" src="{{ c.value.picture }}" alt="" />
+              <div class="details flex flex-col py-2">
+                <div class="brand text-sm text-gray-600">{{ c.value.brand }}</div>
+                <div class="name text-lg">{{ c.value.name }}</div>
+                <div
+                  class="text-gray-600 mt-4 w-max"
+                >
+                ₹{{ c.value.price }}
+              </div>
+              </div>
+            </td>
+            <td class="flex space-x-4">
+              <div class="qty">{{ c.value.quantity }}</div>
+
+            </td>
+            <td>
+              <div class="price">₹{{ c.value.price*c.value.quantity }}</div>
+            </td>
+          </div>
+        </div>
+
+      <hr>
+      <div class="total">
+          <div class="row">
+              <div class="col"> <b> Total:</b> </div>
+              <div class="col d-flex justify-content-end"> <b>{{cartTotal}}</b> </div>
+          </div> <a href="/" class="btn d-flex mx-auto" > Continue Shopping </a>
+      </div>
+  </div>
+</div>

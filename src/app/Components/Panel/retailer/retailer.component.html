@@ -1,25 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 my-5 " *ngFor="let card of productsData">
-      <div class="column">
-      <div class="card">
-        <img [src]="card.picture" alt="Card image cap">
-        <div class="card-body">
-          <div class="card-title">
-            <h4>{{card.name}}</h4>
-          </div>
+<div class ="container">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3 my-5 " *ngFor="let card of productsData">
+          <div class="column">
+          <div class="card">
+            <img [src]="card.picture" alt="Card image cap">
+            <div class="card-body">
+              <div class="card-title">
+                <h4>{{card.name}}</h4>
+              </div>
 
-          <div>
-            {{card.description}}
-          </div>
-          <div>
-              {{card.price}}
-          </div>
+              <div>
+                {{card.description}}
+              </div>
+              <div>
+                  {{card.price}}
+              </div>
 
-          <button type="button" class="btn btn-primary">{{card.buttonText}}</button>
-        </div>
+              <button type="button" class="btn btn-primary">{{card.buttonText}}</button>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
