@@ -20,6 +20,7 @@ export class NavbarComponent {
         this.http.get<Product[]>(url).subscribe((response)=>{
           console.log(response);
           this.router.navigate(['/dashboard']);
+          
           this.service.addData(response);
           // sessionStorage.setItem('productData', JSON.stringify(this.productData));
         })
