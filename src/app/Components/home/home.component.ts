@@ -9,28 +9,28 @@ export class HomeComponent {
 
   cards = [
     {
-      title: 'Card Title 1',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      title: 'HP Laptops',
+      description: 'Best laptop with high performance',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/Carousel3.jpg'
     },
     {
-      title: 'Card Title 2',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      title: 'Boat Headphones',
+      description: 'Best headphones with high quality',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/item1.jpg'
     },
     {
-      title: 'Card Title 3',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      title: 'Dove Cream',
+      description: 'Most natural cream for your most beautiful skin',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/item6.jpg'
     },
     {
-      title: 'Card Title 4',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
+      title: 'Cosmo Cosmetics',
+      description: 'Cosmo Cosmetics for cosmic looks',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/item3.jpg'
     },
     {
       title: 'Card Title 5',
@@ -43,21 +43,21 @@ export class HomeComponent {
       title: 'Card Title 6',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/item5.jpg'
     },
 
     {
       title: 'Card Title 7',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/item6.jpg'
     },
 
     {
       title: 'Card Title 8',
       description: 'Some quick example text to build on the card title and make up the bulk of the card content',
       buttonText: 'Buy',
-      img: './assets/Carousels/Carousel1.jpg'
+      img: './assets/Carousels/Carousel2.jpg'
     },
 
   ];

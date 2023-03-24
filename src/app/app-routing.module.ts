@@ -25,7 +25,6 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'retailer/panel', component: RetailerComponent },
   {path : 'user/registration', component:UserRegistrationComponent},
-  {path : 'user/registration', component:UserRegistrationComponent},
   {path : 'products/description', component:ProductDetailComponent},
   { path: 'checkout', component: CheckoutComponent },
   { path: 'category', component: CategoryComponent },
