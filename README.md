@@ -1,4 +1,4 @@
-# Online-Shopping-Frontend
+# Online-Shopping-Application-(ShoppinGO)-Frontend :
 
 Some important functionalities :
 
